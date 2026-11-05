@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LinguaLift | Language Learning</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-mark">L</span> LinguaLift</a>
+    <span class="top-note">Learn a little. Grow a lot.</span>
+  </header>
+
+  <main class="app-shell">
+    <section id="home-screen" class="screen">
+      <div class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">YOUR DAILY LANGUAGE BOOST</p>
+          <h1>Make every word<br><span>count.</span></h1>
+          <p class="hero-text">Practice Spanish vocabulary with quick quizzes. Choose your level, beat the timer and track your progress.</p>
+          <div class="feature-row">
+            <span>✓ Instant feedback</span><span>✓ Timed rounds</span><span>✓ Score tracking</span>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="bubble bubble-one">¡Hola!</div>
+          <div class="bubble bubble-two">ありがとう</div>
+          <div class="book">Aa</div>
+          <div class="spark">✦</div>
+        </div>
+      </div>
+
+      <div class="section-heading">
+        <div><p class="eyebrow">PICK YOUR CHALLENGE</p><h2>Choose a level</h2></div>
+        <span class="small-muted">5 questions per round</span>
+      </div>
+      <div class="level-grid">
+        <button class="level-card beginner" data-level="beginner">
+          <span class="level-icon">🌱</span><span class="level-name">Beginner</span>
+          <span class="level-desc">Everyday words and greetings</span><span class="level-action">Start learning →</span>
+        </button>
+        <button class="level-card intermediate" data-level="intermediate">
+          <span class="level-icon">🚀</span><span class="level-name">Intermediate</span>
+          <span class="level-desc">Useful phrases and expressions</span><span class="level-action">Start learning →</span>
+        </button>
+        <button class="level-card advanced" data-level="advanced">
+          <span class="level-icon">🏆</span><span class="level-name">Advanced</span>
+          <span class="level-desc">Trickier vocabulary and context</span><span class="level-action">Start learning →</span>
+        </button>
+      </div>
+      <p class="demo-note">Prototype note: This demo uses sample Spanish vocabulary questions. Scores are calculated in your browser.</p>
+    </section>
+
+    <section id="quiz-screen" class="screen hidden">
+      <div class="quiz-top">
+        <button id="back-home" class="text-button">← Change level</button>
+        <span id="level-label" class="level-pill">BEGINNER</span>
+      </div>
+      <div class="quiz-heading">
+        <div><p class="eyebrow">YOUR PRACTICE SESSION</p><h2>Vocabulary quiz</h2></div>
+        <div class="timer-box"><span class="timer-icon">◷</span><div><small>TIME LEFT</small><strong id="timer">20s</strong></div></div>
+      </div>
+      <div class="progress-meta"><span id="question-count">QUESTION 1 OF 5</span><span id="progress-percent">20%</span></div>
+      <div class="progress-track"><div id="progress-fill" class="progress-fill"></div></div>
+
+      <article class="question-card">
+        <div class="question-tag">TRANSLATE THIS WORD</div>
+        <h3 id="question-text">What does “Hola” mean?</h3>
+        <p id="question-hint" class="question-hint">Choose the correct English meaning.</p>
+        <div id="options" class="options"></div>
+        <div id="feedback" class="feedback hidden" role="status"></div>
+        <div class="question-footer">
+          <span id="answered-count" class="small-muted">0 of 5 answered</span>
+          <button id="next-button" class="primary-button" disabled>Next question →</button>
+        </div>
+      </article>
+      <p class="demo-note centered">Each correct answer earns 10 points. No points are deducted for an incorrect answer.</p>
+    </section>
+
+    <section id="result-screen" class="screen hidden">
+      <div class="result-card">
+        <div class="result-icon" id="result-icon">🎉</div>
+        <p class="eyebrow">ROUND COMPLETED</p>
+        <h2 id="result-title">Great effort!</h2>
+        <p id="result-message" class="result-message">You completed your practice round.</p>
+        <div class="score-circle"><strong id="final-score">0</strong><span>/ 50</span></div>
+        <p id="score-caption" class="score-caption">YOUR SCORE</p>
+        <div class="result-stats">
+          <div><strong id="correct-total">0</strong><span>Correct</span></div>
+          <div><strong id="wrong-total">0</strong><span>Incorrect</span></div>
+          <div><strong id="accuracy-total">0%</strong><span>Accuracy</span></div>
+        </div>
+        <div class="result-actions">
+          <button id="retry-button" class="primary-button">Try this level again</button>
+          <button id="levels-button" class="secondary-button">Choose another level</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>LinguaLift · Language Learning App Prototype · Quiz Scoring Module</footer>
+  <script src="script.js"></script>
+</body>
+</html>
